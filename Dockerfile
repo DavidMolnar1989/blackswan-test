@@ -7,7 +7,6 @@ COPY pom.xml /
 RUN mvn -f /pom.xml clean package &&\
 mvn -f /pom.xml liquibase:diff -Pprod -Dliquibase.url=jdbc:h2:/src/main/resources/db/testProdDB -Dliquibase.referenceUrl=jdbc:h2:/src/main/resources/db/testDevDB &&\
 mvn -f /pom.xml liquibase:update -Pprod -Dliquibase.url=jdbc:h2:/src/main/resources/db/testProdDB
-#RUN echo $(ls -1 /src/main/resources/db)
 
 #
 # Package stage

@@ -6,6 +6,13 @@ import java.time.Instant;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
+/**
+ * TaskMapper class using MapStruct mapper. Generates an implementation class to target/generated-sources.
+ * <p>
+ * The implementation class uses Lombok Builder to construct Task/TaskDto Objects.
+ *
+ * @author David Molnar
+ */
 @Mapper(componentModel = "spring")
 public interface TaskMapper {
 
